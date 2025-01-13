@@ -1,0 +1,47 @@
+# Laravel folders
+/vendor
+/node_modules
+/public/storage
+/public/hot
+/public/mix-manifest.json
+
+# Environment files
+.env
+.env.*
+
+# IDE-specific files
+.idea
+*.sublime-project
+*.sublime-workspace
+.vscode/
+nbproject/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Laravel logs and caches
+/storage/*.key
+/storage/logs
+/storage/framework/cache
+/storage/framework/sessions
+/storage/framework/testing
+/storage/framework/views
+/storage/debugbar
+
+# Composer dependencies
+composer.lock
+
+# Node dependencies
+package-lock.json
+yarn.lock
+
+# Build folders
+/public/build
+
+# PHPUnit result cache
+.phpunit.result.cache
+
+# Deployment files
+Homestead.yaml
+Homestead.json
