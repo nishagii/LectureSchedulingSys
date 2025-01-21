@@ -17,7 +17,7 @@
                             
 
                             <li>
-                            <a href="/employees" class="waves-effect {{ request()->is("employees") || request()->is("/employees/*") ? "mm active" : "" }}"><i class="ti-user"></i><span> Employees </span></a>
+                            <a href="/employees" class="waves-effect {{ request()->is("employees") || request()->is("/employees/*") ? "mm active" : "" }}"><i class="ti-user"></i><span> Students </span></a>
                                 <!-- <ul class="submenu">
                                     <li>
                                         <i class="dripicons-view-apps"></i><span>Employees List</span></a>
@@ -33,7 +33,7 @@
                                     <i class="ti-time"></i> <span> Schedule </span>
                                 </a>
                             </li>
-                            <li class="">
+                            <!-- <li class="">
                                 <a href="/check" class="waves-effect {{ request()->is("check") || request()->is("check/*") ? "mm active" : "" }}">
                                     <i class="dripicons-to-do"></i> <span> Attendance Sheet </span>
                                 </a>
@@ -48,7 +48,7 @@
                                 <a href="/attendance" class="waves-effect {{ request()->is("attendance") || request()->is("attendance/*") ? "mm active" : "" }}">
                                     <i class="ti-calendar"></i> <span> Attendance Logs </span>
                                 </a>
-                            </li>
+                            </li> -->
                             <!-- <li class="">
                                 <a href="/latetime" class="waves-effect {{ request()->is("latetime") || request()->is("latetime/*") ? "mm active" : "" }}">
                                     <i class="dripicons-warning"></i><span> Late Time </span>
@@ -64,12 +64,12 @@
                                     <i class="dripicons-alarm"></i> <span> Over Time </span>
                                 </a>
                             </li> -->
-                            <li class="menu-title">Tools</li>
+                            <!-- <li class="menu-title">Tools</li>
                             <li class="">
                                 <a href="{{ route("finger_device.index") }}" class="waves-effect {{ request()->is("finger_device") || request()->is("finger_device/*") ? "mm active" : "" }}">
                                     <i class="fas fa-fingerprint"></i> <span> Biometric Device </span>
                                 </a>
-                            </li>
+                            </li> -->
 
                         </ul>
 						<!-- Log on to codeastro.com for more projects! -->
