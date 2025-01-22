@@ -17,7 +17,7 @@
                             
 
                             <li>
-                            <a href="/employees" class="waves-effect {{ request()->is("employees") || request()->is("/employees/*") ? "mm active" : "" }}"><i class="ti-user"></i><span> Students </span></a>
+                            <a href="/students" class="waves-effect {{ request()->is("employees") || request()->is("/employees/*") ? "mm active" : "" }}"><i class="ti-user"></i><span> Students </span></a>
                                 <!-- <ul class="submenu">
                                     <li>
                                         <i class="dripicons-view-apps"></i><span>Employees List</span></a>
@@ -29,7 +29,7 @@
                             <li class="menu-title">Management</li>
 
                             <li class="">
-                                <a href="/schedule" class="waves-effect {{ request()->is("schedule") || request()->is("schedule/*") ? "mm active" : "" }}">
+                                <a href="/lectures" class="waves-effect {{ request()->is("schedule") || request()->is("schedule/*") ? "mm active" : "" }}">
                                     <i class="ti-time"></i> <span> Schedule </span>
                                 </a>
                             </li>
