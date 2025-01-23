@@ -19,7 +19,7 @@
     </div>
 @endsection
 @section('button')
-    <a href="#addnew" data-toggle="modal" class="btn btn-success btn-sm btn-flat"><i class="mdi mdi-plus mr-2"></i>Add New Schedule</a>
+    <a href="#addnew" data-toggle="modal" class="btn btn-success btn-sm btn-flat"><i class="mdi mdi-plus mr-2"></i>Add New Lecture Schedule</a>
 
 
 @endsection
@@ -79,11 +79,9 @@
         </div> <!-- end col -->
     </div> <!-- end row -->
 
-    @foreach ($schedules as $schedule)
-        @include('includes.edit_delete_schedule')
-    @endforeach
+    
 
-    @include('includes.add_schedule')
+    @include('includes.add_lecture')
 
 @endsection
 

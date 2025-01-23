@@ -103,7 +103,6 @@ class ApiController extends Controller
                     $leave->emp_id = $employee->id;
                     $leave->leave_time = date("H:i:s");
                     $leave->leave_date = date("Y-m-d");
-                    // ontime + overtime if true , else "early go" ....
                     if ($leave->leave_time >= $employee->schedules->first()->time_out) {
                         leaveController::overTime($employee);
                     } else {

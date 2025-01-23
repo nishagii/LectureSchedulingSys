@@ -45,3 +45,5 @@ yarn.lock
 # Deployment files
 Homestead.yaml
 Homestead.json
+
+.env
