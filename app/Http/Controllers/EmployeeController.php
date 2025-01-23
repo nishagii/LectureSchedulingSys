@@ -36,9 +36,7 @@ class EmployeeController extends Controller
             $employee->schedules()->attach($schedule);
         }
 
-        // $role = Role::whereSlug('emp')->first();
-
-        // $employee->roles()->attach($role);
+        
 
         flash()->success('Success','Employee Record has been created successfully !');
 

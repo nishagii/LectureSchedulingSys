@@ -35,22 +35,13 @@ class LectureController extends Controller
         }
     }
 
-    /**
-     * Display a listing of the lecture schedules.
-     *
-     * @return \Illuminate\View\View
-     */
+    
     public function index()
     {
         return view('admin.lectures')->with('lectures', Lecture::all());
     }
 
-    /**
-     * Store a newly created lecture schedule in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
-     */
+   
     public function store(Request $request)
     {
         $request->validate([
@@ -69,7 +60,7 @@ class LectureController extends Controller
         $lecture->notes = $request->additional_notes;
         $lecture->save();
 
-        // Notify students about the new lecture
+        
         $students = Student::all();
         foreach ($students as $student) {
             $message = "A new lecture '{$lecture->lecture_name}' has been scheduled. 📅\n" .
@@ -86,13 +77,7 @@ class LectureController extends Controller
     }
 
 
-    /**
-     * Update the specified lecture schedule in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Lecture  $lecture
-     * @return \Illuminate\Http\RedirectResponse
-     */
+    
     public function update(Request $request, Lecture $lecture)
     {
         $request->validate([
@@ -137,12 +122,7 @@ class LectureController extends Controller
     }
 
 
-    /**
-     * Remove the specified lecture schedule from storage.
-     *
-     * @param  \App\Models\Lecture  $lecture
-     * @return \Illuminate\Http\RedirectResponse
-     */
+    
     public function destroy(Lecture $lecture)
     {
         $lectureName = $lecture->lecture_name;

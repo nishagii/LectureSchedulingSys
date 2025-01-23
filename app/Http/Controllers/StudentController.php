@@ -8,22 +8,13 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class StudentController extends Controller
 {
-    /**
-     * Display a listing of the students.
-     *
-     * @return \Illuminate\View\View
-     */
+    
     public function index()
     {
         return view('admin.students')->with('students', Student::all());
     }
 
-    /**
-     * Store a newly created student in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
-     */
+    
     public function store(Request $request)
     {
         $request->validate([
@@ -44,13 +35,7 @@ class StudentController extends Controller
         return redirect()->route('students.index');
     }
 
-    /**
-     * Update the specified student in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Student  $student
-     * @return \Illuminate\Http\RedirectResponse
-     */
+    
     public function update(Request $request, Student $student)
     {
         $request->validate([
@@ -70,12 +55,7 @@ class StudentController extends Controller
         return redirect()->route('students.index');
     }
 
-    /**
-     * Remove the specified student from storage.
-     *
-     * @param  \App\Models\Student  $student
-     * @return \Illuminate\Http\RedirectResponse
-     */
+    
     public function destroy(Student $student)
     {
         $student->delete();

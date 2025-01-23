@@ -15,13 +15,7 @@ class TwilioWhatsAppService
         $this->client = new Client(env('TWILIO_SID'), env('TWILIO_AUTH_TOKEN'));
     }
 
-    /**
-     * Send a WhatsApp message.
-     *
-     * @param string $to
-     * @param string $message
-     * @return bool
-     */
+    
     public function sendWhatsappNotification($tophoneNumber, $message)
     {
         try {

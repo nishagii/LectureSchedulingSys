@@ -30,11 +30,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class BiometricDeviceController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function index()
     {
         $devices = FingerDevices::all();
@@ -42,22 +38,13 @@ class BiometricDeviceController extends Controller
         return view('admin.fingerDevices.index', compact('devices'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function create()
     {
         return view('admin.fingerDevices.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(StoreRequest $request): RedirectResponse
     {
         $helper = new FingerHelper();
@@ -65,7 +52,7 @@ class BiometricDeviceController extends Controller
         $device = $helper->init($request->input('ip'));
 
         if ($device->connect()) {
-            // Serial Number Sample CDQ9192960002\x00
+           
 
             $serial = $helper->getSerial($device);
 

@@ -17,7 +17,11 @@
                             
 
                             <li>
+<<<<<<< HEAD
+                            <a href="/employees" class="waves-effect {{ request()->is("employees") || request()->is("/employees/*") ? "mm active" : "" }}"><i class="ti-user"></i><span> Students </span></a>
+=======
                             <a href="/students" class="waves-effect {{ request()->is("employees") || request()->is("/employees/*") ? "mm active" : "" }}"><i class="ti-user"></i><span> Students </span></a>
+>>>>>>> f5375111796007b4a9f00e4cd32bb40221919b67
                                 <!-- <ul class="submenu">
                                     <li>
                                         <i class="dripicons-view-apps"></i><span>Employees List</span></a>
