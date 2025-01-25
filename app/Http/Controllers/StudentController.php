@@ -21,7 +21,7 @@ class StudentController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:students,email',
             'course' => 'required|string|max:255',
-            'phone' => 'nullable|string|max:12',
+            'phone' => 'nullable|string|max:10',
         ]);
 
         $phone = $request->phone;
@@ -49,7 +49,7 @@ class StudentController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:students,email,' . $student->id,
             'course' => 'required|string|max:255',
-            'phone' => 'nullable|string|max:12|regex:/^\+94\d+$/',
+            'phone' => 'nullable|string|max:10',
         ]);
 
         $phone = $request->phone;
