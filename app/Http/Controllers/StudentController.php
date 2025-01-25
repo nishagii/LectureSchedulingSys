@@ -21,13 +21,15 @@ class StudentController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:students,email',
             'course' => 'required|string|max:255',
-            'phone' => 'nullable|string|max:10',
+            'phone' => 'nullable|string|max:13',
         ]);
 
         $phone = $request->phone;
         if ($phone){
             $phone = str_replace('+94', '', $phone);
-            $phone = ltrim($phone, '0');
+            if (strlen($phone) == 10) {
+                $phone = substr($phone, 1);
+            }
             $phone = '+94' . $phone;
         }
 
@@ -49,13 +51,15 @@ class StudentController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:students,email,' . $student->id,
             'course' => 'required|string|max:255',
-            'phone' => 'nullable|string|max:10',
+            'phone' => 'nullable|string|max:13',
         ]);
 
         $phone = $request->phone;
         if ($phone){
             $phone = str_replace('+94', '', $phone);
-            $phone = ltrim($phone, '0');
+            if (strlen($phone) == 10) {
+                $phone = substr($phone, 1);
+            }
             $phone = '+94' . $phone;
         }
 
