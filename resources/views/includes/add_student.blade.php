@@ -31,7 +31,7 @@
 
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="text" class="form-control" placeholder="Enter Student's Phone Number" id="phone" name="phone" />
+                            <input type="text" class="form-control" placeholder="Enter Student's Phone Number(0767505656)" id="phone" name="phone" />
                         </div>
 
                         <div class="form-group">
@@ -50,4 +50,8 @@
 
         </div>
     </div>
+
+    
+
 </div>
+

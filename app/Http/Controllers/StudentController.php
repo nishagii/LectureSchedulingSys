@@ -21,14 +21,23 @@ class StudentController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:students,email',
             'course' => 'required|string|max:255',
-            'phone' => 'nullable|string|max:15',
+            'phone' => 'nullable|string|max:13',
         ]);
+
+        $phone = $request->phone;
+        if ($phone){
+            $phone = str_replace('+94', '', $phone);
+            if (strlen($phone) == 10) {
+                $phone = substr($phone, 1);
+            }
+            $phone = '+94' . $phone;
+        }
 
         $student = new Student;
         $student->name = $request->name;
         $student->email = $request->email;
         $student->course = $request->course;
-        $student->phone = $request->phone;
+        $student->phone = $phone;
         $student->save();
 
         flash()->success('Success', 'Student Record has been created successfully !');
@@ -42,13 +51,22 @@ class StudentController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:students,email,' . $student->id,
             'course' => 'required|string|max:255',
-            'phone' => 'nullable|string|max:15',
+            'phone' => 'nullable|string|max:13',
         ]);
+
+        $phone = $request->phone;
+        if ($phone){
+            $phone = str_replace('+94', '', $phone);
+            if (strlen($phone) == 10) {
+                $phone = substr($phone, 1);
+            }
+            $phone = '+94' . $phone;
+        }
 
         $student->name = $request->name;
         $student->email = $request->email;
         $student->course = $request->course;
-        $student->phone = $request->phone;
+        $student->phone = $phone;
         $student->save();
 
         flash()->success('Success', 'Student Record has been Updated successfully !');
