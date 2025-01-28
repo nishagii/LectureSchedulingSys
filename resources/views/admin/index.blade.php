@@ -38,9 +38,9 @@
                     <div class="float-left mini-stat-img mr-4">
                         <span class="ti-panel" style="font-size: 30px"></span>
                     </div>
-                    <h5 class="font-16 text-uppercase mt-0 text-white-50">Available <br> Schedules</h5>
+                    <h5 class="font-16 text-uppercase mt-0 text-white-50">Available <br>Lecture Schedules</h5>
                 </div>
-                <h1 class="font-500 float-right">{{$data[4]}} </h1>
+                <h1 class="font-500 float-right">{{$data[1]}} </h1>
                 <span class="ti-time float-left" style="font-size: 71px"></span>
             </div>
         </div>

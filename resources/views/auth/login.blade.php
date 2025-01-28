@@ -1,11 +1,10 @@
 @extends('layouts.master-blank')
 
 @section('content')
-	<!-- Log on to codeastro.com for more projects! -->
     <div class="wrapper-page">
         <div class="card overflow-hidden account-card mx-3">
             <div class="bg-secondary p-4 text-white text-center position-relative">
-                <h4 class="font-20 m-b-5">Simple Attendance Management System</h4>
+                <h4 class="font-20 m-b-5">Lecture Management System</h4>
                 <p class="text-white-50 mb-4"></p>
                 <a href="{{ route('welcome') }}" class="logo logo-admin">
                     <h1>CA</h1>
@@ -65,8 +64,6 @@
 
 
     </div>
-	<!-- Log on to codeastro.com for more projects! -->
-    <!-- end wrapper-page -->
 @endsection
 
 @section('script')

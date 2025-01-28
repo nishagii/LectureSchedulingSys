@@ -8,7 +8,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
         .gradient-bg {
-            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            background: linear-gradient(135deg, #010a25 0%, #010a25 100%);
         }
 
         .glass-card {
@@ -23,17 +23,60 @@
             color: white;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
+        .cover-section {
+            background: url('assets/images/img2.jpg') no-repeat center center;
+            background-size: cover;
+            height: 500px;
+            position: relative;
+        }
+
+        .cover-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+        }
+
+        .cover-title {
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .cover-subtitle {
+            font-size: 1.25rem;
+            margin-top: 1rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .custom-hover:hover {
+            background-color: #010a25 !important;
+        }
     </style>
 </head>
 
 <body class="gradient-bg min-h-screen">
     <div class="relative">
+        <!-- Cover Image Section -->
+        <div class="cover-section">
+            <div class="cover-text">
+                <h1 class="cover-title">Welcome to Lecture Management System</h1>
+                <p class="cover-subtitle">Effortlessly manage your lectures, Students and more</p>
+            </div>
+        </div>
+
         @if (Route::has('login'))
         <div class="absolute top-0 right-0 mt-6 mr-6 space-x-4">
             @auth
             <a href="{{ url('/admin') }}" class="text-white hover:text-blue-200 transition-colors">Admin</a>
             @else
-            <a href="{{ route('login') }}" class="px-6 py-2 bg-white text-blue-800 rounded-lg hover:bg-blue-50 transition-all font-semibold">Login</a>
+            <a href="{{ route('login') }}"
+                class="px-6 py-2 rounded-lg custom-hover transition-all font-semibold text-white"
+                style="background-color: #E59802;">Login</a>
+
             @if (Route::has('register'))
             <a href="{{ route('register') }}" class="text-white hover:text-blue-200 transition-colors">Register</a>
             @endif
@@ -41,13 +84,8 @@
         </div>
         @endif
 
-        <div class="container mx-auto px-4 py-16">
-            <div class="text-center space-y-8">
-                <!-- Main Title -->
-                <h1 class="text-5xl font-bold text-white mb-4">
-                    Welcome to Lecture Management System
-                </h1>
-
+        <div class="container mx-auto px-4 py-6">
+            <div class="text-center space-y-2">
                 <!-- Clock -->
                 <div class="glass-card inline-block px-8 py-4 rounded-xl mb-8">
                     <div class="clock" id="clock">00:00:00</div>

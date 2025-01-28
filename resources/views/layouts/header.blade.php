@@ -5,10 +5,10 @@
 <div class="topbar-left">
     <a href="/" class="logo">
         <span>
-                <h1 style="color: white; ">S A M S</h1>
+                <h1 style="color: white; ">SHED ez</h1>
             </span>
         <i>
-            <h1>A</h1>
+            <h1>SE</h1>
             </i>
     </a>
 </div>
